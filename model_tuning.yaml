@@ -1,0 +1,81 @@
+CNN Univariate Conjoint:
+    epochs_min_value: 100
+    epochs_max_value: 300
+    epochs_step: 100
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_CNN Univariate Conjoint.csv'
+    batch_size: [32,64,128]
+    
+Auto-ARIMA:
+    
+
+Holt-Winters Additive Exponential Smoothing:
+    trend: ["add"]
+    damped: [True]
+    residual_bias: [True, False]
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_Holt-Winters Additive Exponential Smoothing.csv'
+
+Holt-Winters Multiplicative Exponential Smoothing:
+    trend: ["add"]
+    damped: [True]
+    residual_bias: [True, False]
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_Holt-Winters Multiplicative Exponential Smoothing.csv'
+
+Prophet:
+    growth: ['linear','logistic']
+    changepoint_prior_scale: [0.001, 0.05,0.1, 0.5]
+    seasonality_prior_scale: [0.01, 0.1, 1.0, 10.0]
+    seasonality_mode: ["additive",'multiplicative']
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_Prophet.csv'
+    
+
+Additive Hybrid:
+    units1_min_value: 10
+    units1_max_value: 30
+    units1_step: 10
+    units2_min_value: 10
+    units2_max_value: 30
+    units2_step: 10
+    learning_rate: [0.0001, 0.01, 0.001]
+    epochs_min_value: 500
+    epochs_max_value: 2000
+    epochs_step: 100
+    batch_size: [4,6,8,10,12]
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_Additive Hybrid.csv'
+
+Multiplicative Hybrid:
+    units1_min_value: 10
+    units1_max_value: 30
+    units1_step: 10
+    units2_min_value: 10
+    units2_max_value: 30
+    units2_step: 10
+    learning_rate: [0.0001, 0.01, 0.001]
+    epochs_min_value: 500
+    epochs_max_value: 2000
+    epochs_step: 100
+    batch_size: [4,6,8,10,12]
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_Multiplicative Hybrid.csv'
+
+DNN:
+    units1_min_value: 10
+    units1_max_value: 30
+    units1_step: 10
+    units2_min_value: 10
+    units2_max_value: 30
+    units2_step: 10
+    units3_min_value: 10
+    units3_max_value: 30
+    units3_step: 10
+    optimizer: ['rmsprop','adam']
+    epochs_min_value: 100
+    epochs_max_value: 500
+    epochs_step: 100
+    batch_size: [4,6,8,10,12]
+    Parameters-location: '/mnt/notebooks/autopilot_planning/config/Hyperparameters_DNN.csv'
+    
+
+XGBoost:
+    
+
+GBM:
+   

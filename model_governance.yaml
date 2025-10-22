@@ -1,0 +1,65 @@
+univariate:
+
+  CNN Univariate Conjoint:
+    training: monthly #quaterly
+    parameter-tuning: monthly #to be set quarterly
+    min-data-sku: 30 #change to 30 previously it is set to 60
+    model-location: '/mnt/notebooks/autopilot_planning/models/saved_models/cnn_univariate_conjoint_latest.h5'
+    model-backup-location: '/mnt/notebooks/autopilot_planning/models/saved_models/cnn_univariate_conjoint_backup'
+    model-arch: '/mnt/notebooks/autopilot_planning/models/saved_models/model_arch.yaml'
+    n-steps-in: 60
+    n-steps-out: 1
+    n-features: 1
+    database_name: 'bms'
+    
+  Auto-ARIMA:
+    min-data-sku: 12
+    frequency: 12
+
+  Holt-Winters Additive Exponential Smoothing:
+    min-data-sku: 12
+    frequency: 12
+
+  Holt-Winters Multiplicative Exponential Smoothing:
+    min-data-sku: 12
+    frequency: 12
+
+  Prophet:
+    min-data-sku: 12
+    frequency: 12
+    cap-power: 2
+
+  Additive Hybrid:
+    min-data-sku: 12
+    cap-power: 3
+    in-num: 12
+    frequency: 12
+
+  Multiplicative Hybrid:
+    min-data-sku: 12
+    cap-power: 2
+    in-num: 12
+    frequency: 12
+
+  DNN:
+    min-data-sku: 20
+    n_steps_in: 12
+    n_steps_out: 1
+
+  XGBoost:
+    # min-data-sku: 35
+    min-data-sku: 28
+    lag-start: 1
+    lag-end: 24
+    iterations: 10
+    # min-training-data: 35
+    cv: 5
+    frequency: 12
+
+  GBM:
+    min-data-sku: 35
+    lag-start: 1
+    lag-end: 24
+    iterations: 10
+    # min-training-data: 35
+    cv: 5
